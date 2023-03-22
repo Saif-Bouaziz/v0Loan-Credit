@@ -39,8 +39,8 @@ import {
 import avatar1 from '../../assets/images/avatars/1.jpg'
 import avatar2 from '../../assets/images/avatars/2.jpg'
 
-import WidgetsBrand from '../widgets/WidgetsBrand'
-import WidgetsDropdown from '../widgets/WidgetsDropdown'
+/*import WidgetsBrand from '../widgets/WidgetsBrand'
+import WidgetsDropdown from '../widgets/WidgetsDropdown'*/
 
 const Dashboard = () => {
   const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
@@ -112,7 +112,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <WidgetsDropdown />
+      
       <CCard className="mb-4">
         <CCardBody>
           <CRow>
@@ -240,7 +240,6 @@ const Dashboard = () => {
         </CCardFooter>
       </CCard>
 
-      <WidgetsBrand withCharts />
 
       <CRow>
         <CCol xs>

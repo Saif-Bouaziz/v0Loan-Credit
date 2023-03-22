@@ -3,27 +3,27 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import { CContainer, CSpinner } from '@coreui/react'
 
 // routes config
-import routes from '../routes'
+import BanquierRoutes from '../../src/pages/LandingPages/Banquier/BanquierRoutes'
 
 const AppContent = () => {
   return (
     <CContainer lg>
       <Suspense fallback={<CSpinner color="primary" />}>
         <Routes>
-          {routes.map((route, idx) => {
+          {BanquierRoutes.map((BanquierRoutes, idx) => {
             return (
-              route.element && (
+              BanquierRoutes.element && (
                 <Route
                   key={idx}
-                  path={route.path}
-                  exact={route.exact}
-                  name={route.name}
-                  element={<route.element />}
+                  path={BanquierRoutes.path}
+                  exact={BanquierRoutes.exact}
+                  name={BanquierRoutes.name}
+                  element={<BanquierRoutes.element />}
                 />
               )
             )
           })}
-          <Route path="/pages/LandingPages/Banquier" element={<Navigate to="dashboard" replace />} />
+          <Route path="/dashboard" element={<Navigate to="dashboard" replace />} />
         </Routes>
       </Suspense>
     </CContainer>
