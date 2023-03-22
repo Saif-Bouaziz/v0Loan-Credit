@@ -1,15 +1,16 @@
-import DefaultLayout from "./DefaultLayout";
-function Banquier() {
-  return (
-    <> 
-    
-    <DefaultLayout/>
-    
-    
-    
-    
-    </>
-  );
-}
 
-export default Banquier;
+import DefaultLayout from "layouts/DefaultLayout";
+
+function Banquier() {
+    return (
+      <> 
+      <div> 
+        <DefaultLayout />
+      </div>
+      </>
+    );
+  }
+  
+  export default Banquier;
+  
+

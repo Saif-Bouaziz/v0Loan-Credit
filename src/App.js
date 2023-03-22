@@ -12,11 +12,14 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-
-import { useEffect } from "react";
+import React, { Component, Suspense,useEffect } from 'react'
+//import { useEffect } from "react";
 
 // react-router components
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+
+import { Routes, Route, Navigate, useLocation,HashRouter, BrowserRouter, Link} from "react-router-dom";
+import './scss/style.scss'
+
 
 // @mui material components
 import { ThemeProvider } from "@mui/material/styles";
@@ -56,7 +59,7 @@ export default function App() {
       <CssBaseline />
       <Routes>
         {getRoutes(routes)}
-        <Route path="/presentation" element={<Presentation />} />
+        <Route path="/presentation" element={<Presentation />} /> 
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>
     </ThemeProvider>
