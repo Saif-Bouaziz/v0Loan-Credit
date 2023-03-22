@@ -1,3 +1,4 @@
+
 import DefaultLayout from "layouts/DefaultLayout";
 
 function Banquier() {
@@ -12,3 +13,4 @@ function Banquier() {
   
   export default Banquier;
   
+

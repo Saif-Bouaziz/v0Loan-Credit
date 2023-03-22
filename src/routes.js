@@ -8,7 +8,10 @@ import Dashboard from "./views/dashboard/Dashboard";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Agent from "./pages/LandingPages/Agent/index"
 import SignIn from "layouts/pages/authentication/sign-in";
+import LoanApplication from "./pages/LandingPages/LoanApplication/index"
+
 import Banquier from "./pages/LandingPages/Banquier/index";
+
 
 
 // Sections
@@ -69,24 +72,10 @@ const routes = [
       },
       {
         name: "Loan Application",
-        dropdown: true,
-        /* collapse: [
-          {
-            name: "navbars",
-            route: "/sections/navigation/navbars",
-            component: <Navbars />,
-          },
-          {
-            name: "nav tabs",
-            route: "/sections/navigation/nav-tabs",
-            component: <NavTabs />,
-          },
-          {
-            name: "pagination",
-            route: "/sections/navigation/pagination",
-            component: <Pagination />,
-          },
-        ], */
+        dropdown: true, 
+        route: "/pages/LandingPages/LoanApplication/index", 
+        component: <LoanApplication/>,
+
       },
       /* {
         name: "input areas",
