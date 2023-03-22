@@ -5,23 +5,45 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';  
 import MenuItem from '@mui/material/MenuItem';
+import InputAdornment from '@mui/material/InputAdornment'; 
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Input from '@mui/material/Input';
+import FilledInput from '@mui/material/FilledInput';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff'; 
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup'; 
+import FormLabel from '@mui/material/FormLabel';  
 
 const currencies = [
     {
-      value: 'USD',
-      label: '$',
+      value: 'EDUCATION',
+      label: 'EDUCATION',
     },
     {
-      value: 'EUR',
-      label: '€',
+      value: 'MEDICAL',
+      label: 'MEDICAL',
     },
     {
-      value: 'BTC',
-      label: '฿',
+      value: 'VENTURE',
+      label: 'VENTURE',
     },
     {
-      value: 'JPY',
-      label: '¥',
+      value: 'PERSONAL',
+      label: 'PERSONAL',
+    }, 
+    {
+      value: 'DEBT CONSOLIDATION',
+      label: 'DEBT CONSOLIDATION',
+    }, 
+    {
+      value: 'OTHER',
+      label: 'OTHER',
     },
   ];
   
@@ -29,110 +51,69 @@ const currencies = [
 export default function AddressForm() {
   return (
     <React.Fragment>
-      <Typography variant="h6" gutterBottom>
-        Loan Details
-      </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
+      
+      
+      
+      <Grid container spacing={3}>  
+      
+        <Grid item xs={12} sm={10} > 
           <TextField
-            required
-            id="firstName"
-            name="firstName"
-            label="First name"
-            fullWidth
-            autoComplete="given-name"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="lastName"
-            name="lastName"
-            label="Last name"
-            fullWidth
-            autoComplete="family-name"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            id="address1"
-            name="address1"
-            label="Address line 1"
-            fullWidth
-            autoComplete="shipping address-line1"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            id="address2"
-            name="address2"
-            label="Address line 2"
-            fullWidth
-            autoComplete="shipping address-line2"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="city"
-            name="city"
-            label="City"
-            fullWidth
-            autoComplete="shipping address-level2"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            id="state"
-            name="state"
-            label="State/Province/Region"
-            fullWidth
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="zip"
-            name="zip"
-            label="Zip / Postal code"
-            fullWidth
-            autoComplete="shipping postal-code"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="country"
-            name="country"
-            label="Country"
-            fullWidth
-            autoComplete="shipping country"
-            variant="standard"
-          />
-        </Grid> 
-        <Grid item xs={12} sm={6}> 
-        <TextField
-          id="outlined-select-currency"
-          select
-          label="Select"
-          defaultValue="EUR"
-          helperText="Please select your currency"
-        >
+            id="outlined-select-currency"
+            select
+            label="Type of Loan"
+            defaultValue="EUR"
+            helperText="Please select your Loan Type"
+          >
           {currencies.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
+          <MenuItem key={option.value} value={option.value}>
+          {option.label}
+          </MenuItem>
           ))}  
           </TextField>
+        </Grid> 
+        
+        <Grid item xs={12} sm={6}>
+        <FormControl fullWidth sx={{ m: 1 }}>
+          <InputLabel htmlFor="outlined-adornment-amount">Loan Amount</InputLabel>
+          <OutlinedInput
+            id="outlined-adornment-amount"
+            startAdornment={<InputAdornment position="start">$</InputAdornment>}
+            label="Amount"
+          />
+        </FormControl>
+        </Grid> 
+
+
+        <Grid item xs={12} sm={6}> 
+        <FormControl>
+ <FormLabel id="demo-row-radio-buttons-group-label">Loan Duration</FormLabel>
+ <RadioGroup
+  row
+  aria-labelledby="demo-row-radio-buttons-group-label"
+  name="row-radio-buttons-group"
+ >
+ <FormControlLabel value="female" control={<Radio />} label="12 months" />
+ <FormControlLabel value="male" control={<Radio />} label="24 months" /> 
+ <FormControlLabel value="male" control={<Radio />} label="36 months" /> 
+ <FormControlLabel value="male" control={<Radio />} label="48 months" /> 
+ </RadioGroup>
+</FormControl>
         </Grid>
+                                                                                                                                                                                                                                                                    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <Grid item xs={12}>
           <FormControlLabel
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
