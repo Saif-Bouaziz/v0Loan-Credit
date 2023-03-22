@@ -2,12 +2,14 @@
 // @mui material components
 import Icon from "@mui/material/Icon";
 
-
+import Dashboard from "./views/dashboard/Dashboard";
 // Pages
-import Banquier from "./pages/LandingPages/Banquier/index";
+
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Agent from "./pages/LandingPages/Agent/index"
 import SignIn from "layouts/pages/authentication/sign-in";
+import Banquier from "./pages/LandingPages/Banquier/index";
+
 
 // Sections
 // import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -28,7 +30,6 @@ import Dropdowns from "layouts/sections/elements/dropdowns";
 import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography"; */
-
 const routes = [
   {
     name: "Home",
@@ -190,8 +191,8 @@ const routes = [
         
       },
       {
-        name: "Connect as a banquier",
-        route: "/pages/LandingPages/banquier/index", 
+        name: "Banquier",
+        route: "/pages/LandingPages/Banquier", 
         component: <Banquier />,
       },
     ],
