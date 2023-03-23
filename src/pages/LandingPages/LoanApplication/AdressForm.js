@@ -85,41 +85,44 @@ export default function AddressForm() {
 
 
         <Grid item xs={12} sm={6}> 
-        <FormControl>
- <FormLabel id="demo-row-radio-buttons-group-label">Loan Duration</FormLabel>
- <RadioGroup
-  row
-  aria-labelledby="demo-row-radio-buttons-group-label"
-  name="row-radio-buttons-group"
- >
- <FormControlLabel value="female" control={<Radio />} label="12 months" />
- <FormControlLabel value="male" control={<Radio />} label="24 months" /> 
- <FormControlLabel value="male" control={<Radio />} label="36 months" /> 
- <FormControlLabel value="male" control={<Radio />} label="48 months" /> 
- </RadioGroup>
-</FormControl>
+             <FormControl>
+             <FormLabel id="demo-row-radio-buttons-group-label">Loan Duration</FormLabel>
+             <RadioGroup
+              row
+              aria-labelledby="demo-row-radio-buttons-group-label"
+              name="row-radio-buttons-group"
+             >
+             <FormControlLabel value="female" control={<Radio />} label="12 months" />
+             <FormControlLabel value="male" control={<Radio />} label="24 months" /> 
+             <FormControlLabel value="male" control={<Radio />} label="36 months" /> 
+             <FormControlLabel value="male" control={<Radio />} label="48 months" /> 
+             </RadioGroup>
+            </FormControl>
         </Grid>
-                                                                                                                                                                                                                                                                    
+        <Grid item xs={12} sm={6}>
+          <FormControl fullWidth sx={{ m: 1 }}>
+            <InputLabel htmlFor="outlined-adornment-amount">Loan Percent Income</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-amount"
+              startAdornment={<InputAdornment position="start">%</InputAdornment>}
+              label="Amount"
+            />
+          </FormControl>
+        </Grid>  
+        <Grid item xs={12} sm={6}>
+        <FormControl fullWidth sx={{ m: 1 }}>
+   <InputLabel htmlFor="outlined-adornment-amount">Interest Rate</InputLabel>
+   <OutlinedInput
+     id="outlined-adornment-amount"
+     startAdornment={<InputAdornment position="start">%</InputAdornment>}
+     label="Amount"
+   /> 
+   
+ </FormControl>
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <Grid item xs={12}>
-          <FormControlLabel
-            control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-            label="Use this address for payment details"
-          />
-        </Grid>
+        </Grid>                                                                                                                                                                                               
       </Grid>
     </React.Fragment>
   );

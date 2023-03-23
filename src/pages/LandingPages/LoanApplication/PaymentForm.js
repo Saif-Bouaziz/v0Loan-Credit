@@ -73,7 +73,6 @@ export default function PaymentForm() {
       
       
       <Grid container spacing={3}> 
-
         <Grid item xs={12} md={6}>
         <TextField fullWidth label="First Name" id="fullWidth" 
         InputProps={{
@@ -96,7 +95,7 @@ export default function PaymentForm() {
           ),
         }}   
         />
-        </Grid>  
+        </Grid>   
 
         <Grid item xs={12} md={6}>
         <TextField fullWidth label="Email" id="fullWidth"  

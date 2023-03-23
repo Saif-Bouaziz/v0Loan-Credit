@@ -3,7 +3,7 @@ import React from 'react'
 export default function PretsAccordes() {
   return (
     <div>
-      <h1>oulalalaa</h1>
+      <h1>Prets Accordes</h1>
     </div>
   )
 }

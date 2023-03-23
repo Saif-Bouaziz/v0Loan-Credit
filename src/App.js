@@ -27,7 +27,17 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 // Material Kit 2 React themes
 import theme from "assets/theme";
-import Presentation from "layouts/pages/presentation";
+import Presentation from "layouts/pages/presentation"; 
+import ListeClients from 'views/clients/ListeClients'; 
+import Dashboard from 'views/dashboard/Dashboard'; 
+import PretsAccordes  from 'views/prets/PretsAccordes'; 
+import PretsNonAccordes from 'views/prets/PretsNonAccordes'; 
+import CompteMails from 'views/compte/CompteMails'; 
+import ModifierCompte from 'views/compte/ModifierCompte'; 
+import ComptesBancaire from 'views/clients/ComptesBancaire';
+import DemandesCours from 'views/clients/DemandesCours'; 
+import HistoriqueClients from 'views/clients/HistoriqueClients';
+import AgentVerification from 'views/agents/AgentVerification';
 
 // Material Kit 2 React routes
 import routes from "routes";
@@ -60,7 +70,18 @@ export default function App() {
       <Routes>
         {getRoutes(routes)}
         <Route path="/presentation" element={<Presentation />} /> 
-        <Route path="*" element={<Navigate to="/presentation" />} />
+        <Route path="/client/liste" element={ <ListeClients /> } />  
+        <Route path="/client/historique" element={ <HistoriqueClients /> } /> 
+        <Route path="/client/comptes" element={ <ComptesBancaire /> } /> 
+        <Route path="/client/demandes" element={ <DemandesCours/> } />
+        <Route path="/dashboard" element={ <Dashboard /> } />  
+        <Route path="/prets/accordes" element={ <PretsAccordes /> } />   
+        <Route path="/prets/non-accordes" element={ <PretsNonAccordes /> } />   
+        <Route path="/agents" element={ <AgentVerification /> } />
+        <Route path="/compte/modifier" element={ <ModifierCompte /> } />  
+        <Route path="/compte/mail" element={ <CompteMails /> } />  
+
+
       </Routes>
     </ThemeProvider>
   );
