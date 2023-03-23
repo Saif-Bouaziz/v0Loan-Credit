@@ -13,29 +13,16 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AddressForm from './AdressForm';
 import PaymentForm from './PaymentForm';
-import Review from './Review';
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import Review from './Review'; 
 
 const steps = ['Loan Details', 'Personal Details', 'Documents Upload'];
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <AddressForm />;
-    case 1:
       return <PaymentForm />;
+    case 1:
+      return <AddressForm/>;
     case 2:
       return <Review />;
     default:
@@ -71,7 +58,7 @@ export default function Checkout() {
       </AppBar>
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
         <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
-          <Typography component="h1" variant="h4" align="center">
+          <Typography component="h1" variant="h5" align="center">
             Thank you for filling this form 
           </Typography>
           <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
@@ -87,7 +74,7 @@ export default function Checkout() {
                 Thank you for your order.
               </Typography>
               <Typography variant="subtitle1">
-                Your order number is #2001539. We have emailed your order
+                 We have emailed your order
                 confirmation, and will send you an update when your order has
                 shipped.
               </Typography>
@@ -113,7 +100,7 @@ export default function Checkout() {
             </React.Fragment>
           )}
         </Paper>
-        <Copyright />
+        
       </Container>
     </ThemeProvider>
   );
