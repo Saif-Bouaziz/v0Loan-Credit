@@ -2,12 +2,17 @@
 // @mui material components
 import Icon from "@mui/material/Icon";
 
-
+import Dashboard from "./views/dashboard/Dashboard";
 // Pages
-import Banquier from "./pages/LandingPages/Banquier/index";
+
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Agent from "./pages/LandingPages/Agent/index"
 import SignIn from "layouts/pages/authentication/sign-in";
+import LoanApplication from "./pages/LandingPages/LoanApplication/index"
+
+import Banquier from "./pages/LandingPages/Banquier/index";
+
+
 
 // Sections
 // import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -28,7 +33,6 @@ import Dropdowns from "layouts/sections/elements/dropdowns";
 import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography"; */
-
 const routes = [
   {
     name: "Home",
@@ -68,24 +72,10 @@ const routes = [
       },
       {
         name: "Loan Application",
-        dropdown: true,
-        /* collapse: [
-          {
-            name: "navbars",
-            route: "/sections/navigation/navbars",
-            component: <Navbars />,
-          },
-          {
-            name: "nav tabs",
-            route: "/sections/navigation/nav-tabs",
-            component: <NavTabs />,
-          },
-          {
-            name: "pagination",
-            route: "/sections/navigation/pagination",
-            component: <Pagination />,
-          },
-        ], */
+        dropdown: true, 
+        route: "/pages/LandingPages/LoanApplication/index", 
+        component: <LoanApplication/>,
+
       },
       /* {
         name: "input areas",
@@ -190,8 +180,8 @@ const routes = [
 
       },
       {
-        name: "Connect as a banquier",
-        route: "/pages/LandingPages/banquier/index",
+        name: "Banquier",
+        route: "/pages/LandingPages/Banquier", 
         component: <Banquier />,
       },
     ],

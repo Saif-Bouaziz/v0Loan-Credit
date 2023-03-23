@@ -12,15 +12,23 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-
+import 'react-app-polyfill/stable'
+import 'core-js'
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "App";
+import reportWebVitals from '../src/pages/LandingPages/Banquier/reportWebVitals'
+import { Provider } from 'react-redux'
+import store from '../src/pages/LandingPages/Banquier/store'
 
 ReactDOM.render(
+  <Provider store={store}>
   <BrowserRouter>
     <App />
-  </BrowserRouter>,
+  </BrowserRouter>
+  </Provider>,
   document.getElementById("root")
 );
+
+reportWebVitals()

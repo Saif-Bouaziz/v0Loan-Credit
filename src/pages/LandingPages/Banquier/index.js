@@ -1,15 +1,16 @@
 
-function Banquier() {
-  return (
-    <> 
-    <h1>nermine</h1>
-    <h1>AAAAAAAAAAAAAAAA</h1>
-    <h1>kkkkkk
-    </h1> 
-    <h1>opppaaaa</h1>
-    <h1>nchalah norkdou</h1>
-    </>
-  );
-}
+import DefaultLayout from "layouts/DefaultLayout";
 
-export default Banquier;
+function Banquier() {
+    return (
+      <> 
+      <div> 
+        <DefaultLayout />
+      </div>
+      </>
+    );
+  }
+  
+  export default Banquier;
+  
+
