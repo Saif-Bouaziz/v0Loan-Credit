@@ -69,7 +69,8 @@ export default function App() {
       <CssBaseline />
       <Routes>
         {getRoutes(routes)}
-        <Route path="/presentation" element={<Presentation />} /> 
+        <Route path="/presentation" element={<Presentation />} />  
+        <Route path="*" element={<Presentation />} />
         <Route path="/client/liste" element={ <ListeClients /> } />  
         <Route path="/client/historique" element={ <HistoriqueClients /> } /> 
         <Route path="/client/comptes" element={ <ComptesBancaire /> } /> 
