@@ -36,12 +36,12 @@ const AppHeader = () => {
         </CHeaderBrand>
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
-            <CNavLink to="/dashboard" component={NavLink}>
+            <CNavLink to="/pages/LandingPages/Banquier/dashboard" component={NavLink}>
               Tableau de bord
             </CNavLink>
           </CNavItem>
           <CNavItem>
-            <CNavLink to="/client/liste" component={NavLink}>
+            <CNavLink to="/pages/LandingPages/Banquier/client/liste" component={NavLink}>
               Clients
             </CNavLink>
           </CNavItem>
@@ -51,12 +51,12 @@ const AppHeader = () => {
         </CHeaderNav>
         <CHeaderNav>
           <CNavItem>
-            <CNavLink to="/prets/accordes" component={NavLink}>
+            <CNavLink to="/pages/LandingPages/Banquier/prets/accordes" component={NavLink}>
               <CIcon icon={cilList} size="lg" />
             </CNavLink>
           </CNavItem>
           <CNavItem>
-            <CNavLink to="/compte/mail" component={NavLink}>
+            <CNavLink to="/pages/LandingPages/Banquier/compte/mail" component={NavLink}>
               <CIcon icon={cilEnvelopeOpen} size="lg" />
             </CNavLink>
           </CNavItem>

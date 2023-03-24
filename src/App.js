@@ -73,16 +73,17 @@ export default function App() {
         <Route path="*" element={<Navigate to="/presentation" />} />
         <Route path="/Agent/:type/:id" element={<SingleMail1 />} />
         <Route path="/presentation" element={<Presentation />} /> 
-        <Route path="/client/liste" element={ <ListeClients /> } />  
-        <Route path="/client/historique" element={ <HistoriqueClients /> } /> 
-        <Route path="/client/comptes" element={ <ComptesBancaire /> } /> 
-        <Route path="/client/demandes" element={ <DemandesCours/> } />
-        <Route path="/dashboard" element={ <Dashboard /> } />  
-        <Route path="/prets/accordes" element={ <PretsAccordes /> } />   
-        <Route path="/prets/non-accordes" element={ <PretsNonAccordes /> } />   
-        <Route path="/agents" element={ <AgentVerification /> } />
-        <Route path="/compte/modifier" element={ <ModifierCompte /> } />  
-        <Route path="/compte/mail" element={ <CompteMails /> } />  
+        <Route path="*" element={<Presentation />} /> 
+        <Route path="/pages/LandingPages/Banquier/client/liste" element={ <ListeClients /> } />  
+        <Route path="/pages/LandingPages/Banquier/client/historique" element={ <HistoriqueClients /> } /> 
+        <Route path="/pages/LandingPages/Banquier/client/comptes" element={ <ComptesBancaire /> } /> 
+        <Route path="/pages/LandingPages/Banquier/client/demandes" element={ <DemandesCours/> } />
+        <Route path="/pages/LandingPages/Banquier/dashboard" element={ <Dashboard /> } />  
+        <Route path="/pages/LandingPages/Banquier/prets/accordes" element={ <PretsAccordes /> } />   
+        <Route path="/pages/LandingPages/Banquier/prets/non-accordes" element={ <PretsNonAccordes /> } />   
+        <Route path="/pages/LandingPages/Banquier/agents" element={ <AgentVerification /> } />
+        <Route path="/pages/LandingPages/Banquier/compte/modifier" element={ <ModifierCompte /> } />  
+        <Route path="/pages/LandingPages/Banquier/compte/mail" element={ <CompteMails /> } />  
 
 
       </Routes>
