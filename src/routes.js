@@ -39,7 +39,7 @@ const routes = [
     icon: <Icon>dashboard</Icon>,
     columns: 1,
     rowsPerColumn: 2,
-     collapse: [
+    collapse: [
       {
         name: "landing pages",
         collapse: [
@@ -175,9 +175,9 @@ const routes = [
       },
       {
         name: "Connect as an Agent",
-        route: "/pages/LandingPages/Agent",  
+        route: "/Agent",
         component: <Agent />,
-        
+
       },
       {
         name: "Banquier",
@@ -187,7 +187,7 @@ const routes = [
     ],
   },
   {
-    name: "Simulate", 
+    name: "Simulate",
     route: "/pages/landing-pages/contact-us"
   },
 ];
