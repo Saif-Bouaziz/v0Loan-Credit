@@ -8,8 +8,11 @@ import primary from "../../../data/primary";
 import promotion from "../../../data/promotion";
 import social from "../../../data/social";
 export const HandleDelete = createContext();
+import axios from 'axios';
+import {useState} from 'react';
 
 const reducer = (state, action) => {
+  
   if (action.type === "setcurrentActive")
     return {
       ...state,
@@ -152,8 +155,16 @@ function Agent() {
       payload: { snoozedlist: [...state.snoozedlist, item] },
     });
   };
-
-
+const [nom,setNom] = useState('')
+  const get = () => {
+    axios.get('http://127.0.0.1:8000/agent_de_verification')
+    .then(res => {
+console.log(res.data[0].Nom)
+setNom(res.data[2].Nom)
+    }).catch(err => {
+console.log(err)
+    })
+  }
   return (
     <div>
       <React.Fragment>
@@ -165,7 +176,9 @@ function Agent() {
             state,
           }}
         >
-          <MainNavbar />
+<button onClick={get}> get </button>
+{nom}
+        <MainNavbar />
           <Navbar />
         </HandleDelete.Provider>
       </React.Fragment>
