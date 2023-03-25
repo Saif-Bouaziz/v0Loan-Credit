@@ -49,28 +49,28 @@ const _nav = [
   {
     component: CNavGroup,
     name: 'Clients',
-    to: '/client',
+    to: '/pages/LandingPages/Banquier/client',
     icon: <CIcon icon={cilPeople} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
         name: 'Liste des clients',
-        to: '/client/liste',
+        to: '/pages/LandingPages/Banquier/client/liste',
       },
       {
         component: CNavItem,
         name: 'Historique des clients',
-        to: '/client/historique',
+        to: '/pages/LandingPages/Banquier/client/historique',
       },
       {
         component: CNavItem,
         name: 'Comptes bancaires',
-        to: '/client/comptes',
+        to: '/pages/LandingPages/Banquier/client/comptes',
       },
       {
         component: CNavItem,
         name: 'Demandes en cours',
-        to: '/client/demandes',
+        to: '/pages/LandingPages/Banquier/client/demandes',
       },
     ],
   },
